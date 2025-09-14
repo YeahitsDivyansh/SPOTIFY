@@ -4,8 +4,23 @@ import { sql } from './config/db.js';
 import adminRoutes from './route.js';
 import cloudinary from 'cloudinary';
 import cors from 'cors';
+import redis from 'redis';
 
 dotenv.config();
+
+export const redisClient = redis.createClient({
+  password: process.env.Redis_Password as string,
+  socket: {
+    host: "redis-14517.c16.us-east-1-2.ec2.redns.redis-cloud.com",
+    port: 14517
+  }
+});
+
+redisClient.connect().then(() => {
+  console.log("Connected to Redis");
+}).catch((err) => {
+  console.error("Redis connection error:", err);
+});
 
 // ✅ Cloudinary config (keys must match .env exactly)
 cloudinary.v2.config({
