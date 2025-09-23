@@ -1,7 +1,6 @@
 import { sql } from "./config/db.js";
 import TryCatch from "./TryCatch.js";
 import { redisClient } from "./index.js";
-import redis from 'redis';
 
 export const getAllAlbum = TryCatch(async (req, res) => {
     let albums;
