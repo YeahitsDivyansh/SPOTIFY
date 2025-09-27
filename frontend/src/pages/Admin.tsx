@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserData } from "../context/UserContext";
 import { useSongData } from "../context/SongContext";
@@ -25,7 +25,7 @@ const Admin = () => {
         setFile(selectedFile);
     };
 
-    const addAlbumHandler = async (e: FormEvent) => {
+    const addAlbumHandler = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!file) return;
@@ -60,7 +60,7 @@ const Admin = () => {
         }
     };
 
-    const addSongHandler = async (e: FormEvent) => {
+    const addSongHandler = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!file) return;
