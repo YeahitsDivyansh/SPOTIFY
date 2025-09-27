@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const server = "https://spotify-user-service-pumj.onrender.com/";
+const server = "https://spotify-user-service-pumj.onrender.com";
 
 export interface User {
     _id: string;

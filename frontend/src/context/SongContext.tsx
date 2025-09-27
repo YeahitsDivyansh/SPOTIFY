@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 
-const server = "https://spotify-song-service-oggj.onrender.com/";
+const server = "https://spotify-song-service-oggj.onrender.com";
 
 export interface Song {
     id: string;

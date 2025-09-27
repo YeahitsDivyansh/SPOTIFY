@@ -6,7 +6,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { MdDelete } from "react-icons/md";
 
-const server = "https://spotify-admin-service-6ei4.onrender.com/";
+const server = "https://spotify-admin-service-6ei4.onrender.com";
 
 const Admin = () => {
     const navigate = useNavigate();
